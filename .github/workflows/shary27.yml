@@ -19,6 +19,5 @@ uses: actions/setup-node@v2-beta
 with:
 node-version: 12
 name: Install Surge
-run: npm install -g surge
 - name: Run Surge
 run: surge./ bootcamp-2020_unkempt-knee.surge.sh/ --token ${{secret.sharyar_secret}}
