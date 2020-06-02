@@ -21,4 +21,4 @@ node-version: 12
 name: Install Surge
 run: npm install -g surge
 - name: Run Surge
-run:surge./ unkempt-knee.surge.sh/ --token ${{secret.sharyar_secret}}
+run: surge./ unkempt-knee.surge.sh/ --token ${{secret.sharyar_secret}}
