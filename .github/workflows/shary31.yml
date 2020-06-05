@@ -16,9 +16,9 @@ steps:
 - uses: actions/checkout@v2
 # Runs a single command using the runners shell
 - name: Installing Node
-uses: actions/setup-node@v2-beta
-with:
-node-version: 12
+  uses: actions/setup-node@v2-beta
+  with:
+   node-version: 12
 - name: Imstalling script
 run: npm install --global surge
 - name: deploying using surge
