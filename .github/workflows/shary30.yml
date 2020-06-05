@@ -22,4 +22,4 @@ node-version: 12
 - name: Imstalling script
 run: npm install --global surge
 - name: deploying using surge
-run: surge ./ unkempt-knee.surge.sh/ --token ${{ secrets.sharyar_secret }}
+run: surge ./ unkempt-knee.surge.sh --token ${{ secrets.sharyar_secret }}
