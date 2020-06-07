@@ -25,4 +25,4 @@ jobs:
     -name: Installing surge
      run:  npm install --global surge
     -name: Run Surge
-     run: surge ./ bootcamp-2020_unkempt-knee.surge.sh --token ${{secrets.sharyar_secret}}
+     run: surge ./ unkempt-knee.surge.sh --token ${{secrets.SHARYAR_SECRET}}
