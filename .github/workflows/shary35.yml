@@ -1,4 +1,5 @@
-name: CI
+# this is a basic workflow to get u started
+name: Deploy Website
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -13,15 +14,15 @@ jobs:
 # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-     -uses: actions/checkout@v2
+    -uses: actions/checkout@v2
 # Runs a single command using the runners shell
-     name: Installing Node
-     uses: actions/setup-node@v2-beta
-     with:
+    -name: Install NodeJS
+    uses: actions/setup-node@v2-beta
+    with:
       node-version: 12
   #Runs a set of commands using the runners shell
   
-      name: Imstalling script
-      run: npm install --global surge
-     -name: deploying using surge
-      run: surge ./ unkempt-knee.surge.sh --token ${{ secrets sharyar.secret }}
+-name: Install surge
+ run:  npm install -g surge
+-name: Run Surge
+ run: surge ./ bootcamp-2020.unkempt-knee.surge.sh/ --token ${{secrets.sharyar_secret}}
