@@ -31,4 +31,4 @@ jobs:
     - name: Install Surge
       run: npm install -g surge 
     - name:  Run surge
-      run: surge ./ build projectreact.surge.sh --token ${{ secrets.SURGE_TOKEN2 }}
+      run: surge ./ unkempt-knee.surge.sh --token ${{secrets.SHARYAR_SECRET}}
