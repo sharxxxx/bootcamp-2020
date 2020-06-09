@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Deploy Basic react app
+name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -23,12 +23,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with: 
         node-version: 12
-    - uses: borales/actions-yarn@v2.0.0 
-      with: 
-        cmd: install 
-    - name: Build react app
-      run: yarn build
-    - name: Install Surge
-      run: npm install -g surge 
+    
+    
+    - name: Installing script
+      run: npm install -global surge 
     - name:  Run surge
       run: surge ./ unkempt-knee.surge.sh --token ${{secrets.SHARYAR_SECRET}}
